@@ -97,7 +97,7 @@ h1{
 }
 .details input::placeholder{
     padding: 0.2rem 0.4rem; 
-
+    
     color: var(--clr-Dark-grayish-cyan1);
 }
 .details input:focus{
@@ -136,6 +136,7 @@ h1{
 
 }
 .details .percent input::placeholder{
+    text-align: center;
     color: var(--clr-Dark-grayish-cyan1);
 
 }
@@ -229,7 +230,50 @@ h1{
 }
 
 
+@media only screen and (max-width: 992px) {
+    .logo{
+        margin: 2rem;
+    }
+    .card{
+        flex-direction: column;
+        margin: 0rem;
+        border-radius: 1rem 1rem 0 0 ;
 
+    }
+    .details{
+        margin: 1rem ;
+        width: 355px;
+    }
+   
+    .details input{
+        padding: 0.2rem 0.4rem; 
+        width: 320px;
+        margin: 0;
+    }
+    .details .percent input{
+        width: 150px;
+    
+    }
+    .details .bill{
+        margin: 0 1rem;
+    }
+    .details .tip-percent{
+        margin: 0 1rem;
+    }
+    .details .no-people{
+        margin: 0 1rem;
+    }
+    .details .percent{
+        grid-template-columns: 150px 150px;
+    }
+    .calsi{
+        width: 355px;
+    }
+    .btn-reset{
+        margin-top: 0rem;
+    }
+
+}
 
 
 
