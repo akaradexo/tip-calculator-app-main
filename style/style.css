@@ -150,10 +150,16 @@ h1{
     display: flex;
     justify-content: space-between;
 }
-.details .no-people .label-wrapper h1{
-    display: none;
+.details .no-people .label-wrapper .error-msg{
+    opacity: 0;
     color: red;
 }
+.details .no-people .label-wrapper .show-error-msg{
+    opacity: 1;
+    color: red;
+}
+
+
 
 /* right-side */
 .calsi{
@@ -222,6 +228,10 @@ h1{
 .btn-tip:hover{
     background-color: #9fe8df;
     transition: 0.5s;
+}
+.btn-active{
+    background-color: var(--clr-Strong-cyan);
+    color: var(--clr-Very-dark-cyan);
 }
 .btn-tip:focus{
     background-color: var(--clr-Strong-cyan);
