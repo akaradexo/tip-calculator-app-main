@@ -16,8 +16,8 @@ people.addEventListener('input', setPeopleValue);
 resetBtn.addEventListener('click', reset);
 
 
-let billValue = 0.0; //default value
-let tipValue = 0.15; //default value -> 15% button is active
+let billValue = 0.0; 
+let tipValue = 0.15; 
 let peopleValue = 1; 
 
 function validateFloat(s){
@@ -42,27 +42,22 @@ function setBillValue(){
     billValue = parseFloat(bill.value);
 
     calculateTip();
-    //console.log(billValue);
 }
 
 function handleClick(event){
     tipBtns.forEach(btn => {
-        //clear active state
         btn.classList.remove('btn-active');
 
-        //set active state 
         if(event.target.innerHTML == btn.innerHTML){
             btn.classList.add('btn-active');
             tipValue = parseFloat(btn.innerHTML)/100;
         }
     });
 
-    //clear custom tip
     tipCustom.value = '';
 
     calculateTip();
 
-    //console.log(tipValue);
 }
 
 function setTipCustomValue(){
@@ -72,7 +67,6 @@ function setTipCustomValue(){
     
     tipValue = parseFloat(tipCustom.value/100);
 
-    //remove active state from buttons
     tipBtns.forEach(btn => {
         btn.classList.remove('btn-active');
     });
@@ -81,7 +75,6 @@ function setTipCustomValue(){
         calculateTip();
     }
     
-    //console.log(tipValue);
 }
 
 function setPeopleValue(){
@@ -99,7 +92,6 @@ function setPeopleValue(){
     }
 
     calculateTip();
-    //console.log(peopleValue);
 }
 
 function calculateTip(){
